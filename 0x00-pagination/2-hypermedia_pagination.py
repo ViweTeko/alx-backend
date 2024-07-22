@@ -48,8 +48,10 @@ class Server:
         if page == 1:
             prev_page = None
         else:
-            prev_page = -1
+            prev_page = - 1
         if z_index > len(dataset):
+            next_page = None
+        else:
             next_page = page + 1
         tot_pages = math.ceil(len(dataset) / page_size)
 

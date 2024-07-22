@@ -39,7 +39,7 @@ class Server:
         curr_idx = index
         while len(data) < page_size and curr_idx < len(self.indexed_dataset()):
             try:
-                curr_idx < len(self.indexed_dataset()[curr_idx])
+                data.append(self.indexed_dataset()[curr_idx])
                 curr_idx += 1
             except KeyError:
                 break

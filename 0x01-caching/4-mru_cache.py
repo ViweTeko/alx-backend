@@ -24,7 +24,7 @@ class MRUCache(BaseCaching):
         """Implements MRU eviction caching system"""
         if key is None or item is None:
             return
-            
+
         if key in self.cache_data:
             self.keys.remove(key)
         elif len(self.cache_data) >= self.MAX_ITEMS:

@@ -27,6 +27,6 @@ class LIFOCache(BaseCaching):
                 del self.cache_data[new_key]
                 print(f'DISCARD: {new_key}')
             self.cache_data[key] = item
-            self.queue.append(key)
+            self.stack.append(key)
         else:
             self.cache_data[key] = item

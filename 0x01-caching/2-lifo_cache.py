@@ -30,3 +30,5 @@ class LIFOCache(BaseCaching):
             self.stack.append(key)
         else:
             self.cache_data[key] = item
+            self.stack.remove(key)
+            self.stack.append(key)

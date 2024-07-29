@@ -28,5 +28,5 @@ class LRUCache(BaseCaching):
             self.cache_data.move_to_end(key)
         self.cache_data[key] = item
         if (len(self.cache_data)) > self.MAX_ITEMS:
-            old_key, old_val = self.popitem(last=False)
+            old_key, old_val = self.cache_data.popitem(last=False)
             print(f'DISCARD: {old_key}')
